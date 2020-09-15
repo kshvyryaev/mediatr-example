@@ -22,6 +22,8 @@ namespace NotesService.Api
 			services.AddHandlers();
 
 			services.AddRepositories(Configuration);
+
+			services.AddHttpClients(Configuration);
 		}
 
 		public void Configure(IApplicationBuilder app)
