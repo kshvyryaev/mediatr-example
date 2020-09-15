@@ -1,4 +1,4 @@
-﻿namespace NotesService.Infrastructure.Data
+﻿namespace NotesService.Infrastructure.Repositories
 {
 	public class DatabaseOptions
 	{

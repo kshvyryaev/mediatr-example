@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NotesService.Domain.Contracts.Repositories;
-using NotesService.Infrastructure.Data;
-using NotesService.Infrastructure.Data.Repositories;
+using NotesService.Infrastructure.Repositories;
 
 namespace NotesService.Infrastructure
 {

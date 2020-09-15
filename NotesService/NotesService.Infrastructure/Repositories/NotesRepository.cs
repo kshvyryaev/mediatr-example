@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using NotesService.Domain.Contracts.Repositories;
 using NotesService.Domain.Entities;
 
-namespace NotesService.Infrastructure.Data.Repositories
+namespace NotesService.Infrastructure.Repositories
 {
 	// TODO: Implement repository
 	public class NotesRepository : INotesRepository
