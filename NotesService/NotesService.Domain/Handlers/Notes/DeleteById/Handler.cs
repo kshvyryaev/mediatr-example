@@ -19,7 +19,7 @@ namespace NotesService.Domain.Handlers.Notes.DeleteById
 		{
 			if (request == null)
 			{
-				NotValidExeption.ThrowRequestCannotBeNull();
+				NotValidExeption.ThrowCannotBeNull(nameof(Request));
 			}
 
 			var deleted = await _notesRepository.DeleteByIdAsync(request.Id);

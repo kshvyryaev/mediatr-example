@@ -25,7 +25,7 @@ namespace NotesService.Domain.Handlers.Notes.GetById
 		{
 			if (request == null)
 			{
-				NotValidExeption.ThrowRequestCannotBeNull();
+				NotValidExeption.ThrowCannotBeNull(nameof(Request));
 			}
 
 			var note = await _notesRepository.GetByIdAsync(request.Id);

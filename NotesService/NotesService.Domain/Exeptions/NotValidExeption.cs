@@ -7,8 +7,6 @@ namespace NotesService.Domain.Exeptions
 {
 	public class NotValidExeption : Exception
 	{
-		private const string RequestCannotBeNullErrorMessage = "Request cannot be null.";
-
 		private readonly List<ValidationError> _errors;
 
 		public NotValidExeption(ValidationError error)
@@ -30,21 +28,10 @@ namespace NotesService.Domain.Exeptions
 
 		public IReadOnlyCollection<ValidationError> Errors => _errors.AsReadOnly();
 
-		public NotValidExeption AddError(ValidationError error)
+		public static void ThrowCannotBeNull(string entityName)
 		{
-			_errors.Add(error);
-			return this;
-		}
-
-		public NotValidExeption AddErrors(IEnumerable<ValidationError> errors)
-		{
-			_errors.AddRange(errors);
-			return this;
-		}
-
-		public static void ThrowRequestCannotBeNull()
-		{
-			var error = new ValidationError(ValidationErrorType.Form, RequestCannotBeNullErrorMessage);
+			var errorMessage = $"{entityName} cannot be null.";
+			var error = new ValidationError(ValidationErrorType.Form, errorMessage);
 			throw new NotValidExeption(error);
 		}
 

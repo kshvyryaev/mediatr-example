@@ -29,7 +29,7 @@ namespace NotesService.Domain.Handlers.Notes.Update
 		{
 			if (request == null)
 			{
-				NotValidExeption.ThrowRequestCannotBeNull();
+				NotValidExeption.ThrowCannotBeNull(nameof(Request));
 			}
 
 			var validationResult = _validator.Validate(request);
